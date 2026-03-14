@@ -11,3 +11,29 @@
 * **Algorithm:** Grover's Search (with Oracle & Diffusion)
 
 ---
+import cirq
+import numpy as np
+
+# ૧. Qubits સેટઅપ
+qubits = cirq.LineQubit.range(3)
+circuit = cirq.Circuit()
+
+# ૨. Photonic Scanning (પ્રકાશની ગતિએ ડેટા એનાલિસિસ)
+circuit.append(cirq.H.on_each(*qubits))
+
+# ૩. Acoustic Alignment (RY Gate દ્વારા ફેઝ એડજસ્ટમેન્ટ)
+circuit.append(cirq.ry(np.pi/2).on(qubits[1]))
+
+# ૪. Kinetic Inversion (Grover's Oracle લોજિક)
+# આ ભાગ અસામાન્ય પેટર્નને 'માર્ક' કરે છે
+circuit.append(cirq.Z(qubits[2]))
+
+# ૫. Measurement (પરિણામ મેળવવું)
+circuit.append(cirq.measure(*qubits, key='result'))
+
+# સિમ્યુલેશન રન કરવું
+simulator = cirq.Simulator()
+result = simulator.run(circuit, repetitions=100)
+
+print("Quantum Data Anomaly Simulation Results:")
+print(result.histogram(key='result'))
