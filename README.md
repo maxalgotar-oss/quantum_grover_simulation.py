@@ -1,1 +1,13 @@
-# quantum_grover_simulation.py
+# ⚛️ Quantum-Anomaly-Grover-Search
+
+આ પ્રોજેક્ટ ક્વોન્ટમ કમ્પ્યુટિંગના ગ્રોવર્સ એલ્ગોરિધમ (Grover's Algorithm) પર આધારિત એક એડવાન્સ ડેટા સિમ્યુલેશન છે.
+
+### 🚀 પ્રોજેક્ટનો મુખ્ય ઉદ્દેશ્ય:
+જૈવિક કોષોના ડેટામાં રહેલી અસામાન્ય પેટર્ન (Anomalies) ને ક્વોન્ટમ સ્પીડ સાથે શોધવી. આ સિમ્યુલેશનમાં પ્રકાશ, અવાજ અને ગતિના ગાણિતિક મોડેલ્સનો ઉપયોગ કરવામાં આવ્યો છે.
+
+### 🛠️ ટેકનોલોજી:
+* **Language:** Python
+* **Library:** Google Cirq
+* **Algorithm:** Grover's Search (with Oracle & Diffusion)
+
+---
